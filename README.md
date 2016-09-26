@@ -24,7 +24,10 @@ Our motivations in creating this document are to:
 - [Speed Optimization Guidelines](#og)
 - [Build Tool](#bt)
 
-<a name="gg"></a>Notes you need to consider before starting coding
+<a name="gg"></a>General Guidelines
+========================
+
+Notes you need to consider before starting coding
 ------------------------------------------------
 
 - Review design/styleguide carefully, if you did not find any styleguide in design files ask our design team to create one.
