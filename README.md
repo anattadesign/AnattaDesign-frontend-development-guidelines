@@ -1,4 +1,4 @@
-AnattaDesign frontend development guidelines
+AnattaDesign Frontend Development Guidelines
 ========================
 
 ## Overview
