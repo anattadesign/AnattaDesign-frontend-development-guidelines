@@ -65,7 +65,7 @@ We use server-side or build processes to automatically minify and gzip all stati
 Grid System
 ------------------------------------------------
 
-We use [lost](https://github.com/peterramsing/lost) grid system and its already included in your library.
+We use [lost](https://github.com/peterramsing/lost) grid system and its already included in our library.
 
 <a name="mg"></a>Markup Guidelines
 ========================
