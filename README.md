@@ -224,7 +224,7 @@ Avoid using HTML comments.
 <a name="cg"></a>CSS Guidelines
 ========================
 
-We were using SCSS as a pre-processor from last 2 years but now we have moved to [POSTCSS](http://postcss.org/) postprocessor which more powerfull and efficient than SCSS. Also PostCSS lets you add PostCSS plugins that enable you to manipulate your CSS in different ways.
+We were using SCSS as a pre-processor from last 2 years but now we have moved to [POSTCSS](http://postcss.org/) postprocessor which has more powerfull and efficient than SCSS. Also PostCSS lets you add PostCSS plugins that enable you to manipulate your CSS in different ways.
 
 Here is the [great article on SmashingMagazine's](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/) which would help you know more about it. 
 
