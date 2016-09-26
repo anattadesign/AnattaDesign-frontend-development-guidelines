@@ -5,13 +5,6 @@ AnattaDesign Frontend Development Guidelines
 
 This document details the guidelines and standards adhered to by the AnattaDesign, Inc., and all web applications built should take these into consideration.  It is an evolving document and should be reviewed as and when required to keep up with changes in technology and best practice.
 
-- [General Guidelines](#gg)
-- [Markup Guidelines](#mg)
-- [CSS Guidelines and best practice](#cg)
-- [JavaScript Guidelines](#jg)
-- [Speed Optimization Guidelines](#og)
-- [Build Tool](#bt)
-
 ## Purpose
 
 Our motivations in creating this document are to:
@@ -20,7 +13,16 @@ Our motivations in creating this document are to:
 - More optimized and efficient CSS code.
 - Predictable, reusable, maintainable, and scalable stylesheets.
 - Ensure we create professional quality Web sites.
-- Guide staff on-boarding or educate new developers.  
+- Guide staff on-boarding or educate new developers. 
+
+## What does it include?
+
+- [General Guidelines](#gg)
+- [Markup Guidelines](#mg)
+- [CSS Guidelines and best practice](#cg)
+- [JavaScript Guidelines](#jg)
+- [Speed Optimization Guidelines](#og)
+- [Build Tool](#bt)
 
 <a name="gg"></a>Notes you need to consider before starting coding
 ------------------------------------------------
