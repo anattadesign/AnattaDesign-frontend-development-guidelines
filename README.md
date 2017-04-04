@@ -379,12 +379,12 @@ When indenting Sass or PostCSS, stick to the same four (4) spaces, and also leav
 **Example:**
 
 	.c-nav {
-		color: red;
+	    color: red;
 	}
 	
-		.c-nav__link {
-			color: red;
-		}
+	    .c-nav__link {
+		color: red;
+	    }
 
    
  
