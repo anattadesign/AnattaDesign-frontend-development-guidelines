@@ -3,9 +3,9 @@ CSS Guidelines
 
 ## Overview
 
-We have been using SCSS as a pre-processor for the last 5 years but now we have moved to [POSTCSS](http://postcss.org/) postprocessor which has more powerfull and efficient than SCSS. Also PostCSS lets you add PostCSS plugins that enable you to manipulate your CSS in different ways.
+We have been using SCSS as a pre-processor for the last 5 years, but now we have moved to [POSTCSS](http://postcss.org/) postprocessor which is more powerfull and efficient than SCSS. Also, PostCSS lets you add PostCSS plugins that enable you to manipulate your CSS in different ways.
 
-Here is the [great article on SmashingMagazine's](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/) which would help you know more about it. 
+Here is a [great article from SmashingMagazine](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/) that provides additional information. 
 
 
 Plan your CSS
@@ -19,7 +19,7 @@ Plan your CSS
 Principles
 ------------------------------------------------
 
-List of our css principles which makes our stylesheet more efficient, maintainable and scalable.
+Below is a list of our css principles which makes our stylesheet more efficient, maintainable and scalable.
 
 - Modular/Component based stylesheet
 - Single responsibility selectors
@@ -37,7 +37,7 @@ Concise terminology used in these standards:
     property: value;
     }
 
-property: value makes a declaration. Selector and declarations makes a rule.
+`property: value` makes a declaration. `Selector` and `declarations` makes a rule.
 
 Write Valid Css
 ------------------------------------------------
@@ -48,21 +48,20 @@ Unless dealing with CSS validator bugs or requiring proprietary syntax, use vali
 
 Use tools such as the [W3C CSS validator](https://jigsaw.w3.org/css-validator/) to test.
 
-Using valid CSS is a measurable baseline quality attribute that allows to spot CSS code that may not have any effect and can be removed, and that ensures proper CSS usage.
 
 Don't use resets
 ------------------------------------------------
 
-For maximum control over CSS across platforms, a lot of people used to use CSS resets to remove every style, before then building things back up themselves. This certainly has its merits, but especially in the modern world CSS resets can be overkill, resulting in lots of extra time spent reimplementing things that weren't completely broken in the first place, like default margins, list styles, etc.
+For maximum control over CSS across platforms, it is common practice to use CSS resets to return every style to default value. This allows you to build the values back up yourself. This certainly has its merits, but especially in the modern world, CSS resets can be overkill. Following this practive can result in a great deal of of extra time spent reimplementing items that weren't completely broken in the first place, like default margins, list styles, etc.
 
-If you really feel like you need to use a reset, consider using [normalize.css by Nicolas Gallagher](http://necolas.github.io/normalize.css/), which aims to just make things more consistent across browsers, get rid of some default annoyances that we always remove (the margins on `<body>`, for example) and fix a few bugs.
+If you really feel like you need to use a reset, consider using [normalize.css by Nicolas Gallagher](http://necolas.github.io/normalize.css/), which aims to make things more consistent across browsers, get rid of some default annoyances that we always remove (the margins on `<body>`, for example) and fix a few bugs.
 
 CSS Hacks
 ------------------------------------------------
 
 Avoid user agent detection as well as CSS “hacks”—try a different approach first.
 
-It’s tempting to address styling differences over user agent detection or special CSS filters, workarounds, and hacks. Both approaches should be considered last resort in order to achieve and maintain an efficient and manageable code base. Put another way, giving detection and hacks a free pass will hurt projects in the long run as projects tend to take the way of least resistance. That is, allowing and making it easy to use detection and hacks means using detection and hacks more frequently—and more frequently is too frequently.
+It’s tempting to address styling differences over user agent detection or special CSS filters, workarounds, and hacks. Both approaches should be considered a last resort in order to achieve and maintain an efficient and manageable code base. Put another way, giving detection and hacks a free pass will hurt projects in the long run as projects tend to take the way of least resistance. That is, allowing and making it easy to use detection and hacks means using detection and hacks more frequently—and more frequently is too frequently.
 
 CSS Quotation Marks
 ------------------------------------------------
@@ -78,7 +77,7 @@ Media Queries
 
 **Mobile First**
 
-When including different sets of styles for different target viewport sizes using media queries inside the same stylesheet, it is a good idea to make the default styling before any media queries have been applied to the document the narrow screen/mobile styling, and then override this for wider viewports inside successive media queries.
+When including different sets of styles for different target viewport sizes using media queries inside the same stylesheet, it is a good idea to make the default styling before any media queries have been applied to the document for narrow screen/mobile styling. Next you will override this for wider viewports inside successive media queries.
 
 ```css
 /*Default CSS layout for narrow screens*/
@@ -127,7 +126,7 @@ This comment style is used as the separator of the main sections. There are 2 em
    ========================================================================== */
 ```
 
-The following comment style is used as the separator of the subsections of the main sections. It has 2 empty lines before it and 1 empty line after it:
+The following comment style is used as the separator of the subsections within the main sections. It has 2 empty lines before it and 1 empty line after it:
 
 ```css
 /* Sub-section comment block
@@ -208,7 +207,7 @@ Declaration Order
 
 **Basic**
 
-Related property declarations should be grouped together following the order:
+Related property declarations should be grouped together in the following order:
 
 1. Positioning
 2. Box model
@@ -256,11 +255,11 @@ Everything else takes place inside the component or without impacting the previo
 
 - Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep. This prevents overly-specific CSS selectors.
 
-- Avoid large numbers of nested rules. Break them up when readability starts to be affected. Preference to avoid nesting that spreads over more than 20 lines.
+- Avoid large numbers of nested rules. Break them up when readability starts to be affected. It is preferable to avoid nesting that spreads over more than 20 lines.
 
 - Always place `@extend` statements on the first lines of a declaration block.
 
-- Where possible, group `@include` statements at the top of a declaration block, after any `@extend` statements.
+- Where possible, group `@include` statements at the top of a declaration block after any `@extend` statements.
 
 ```css
 .selector-1 {
@@ -308,7 +307,7 @@ Avoid very complex child and descendant selectors like:
 
 **Multiple Selectors**
 
-Multiple selectors should each be on a single line, with no space after each comma.
+Multiple selectors should each be on a single line with no space after each comma.
 
 ```css
 .faqs a.open,
@@ -318,11 +317,11 @@ Multiple selectors should each be on a single line, with no space after each com
 
 **Prefixes**
 
-Prefix selectors with an application-specific prefix (optional).
+Prefix selectors with an application-specific prefix (optional):
 
 In large projects as well as for code that gets embedded in other projects or on external sites use prefixes (as namespaces) for ID and class names. Use short, unique identifiers followed by a dash.
 
-Using namespaces helps preventing naming conflicts and can make maintenance easier, for example in search and replace operations.
+Using namespaces helps to prevent naming conflicts and can make maintenance easier, for example in search and replace operations.
 
 ```css
 .adw-help {} /* AdWords */
@@ -396,13 +395,13 @@ Using ID and class names this way contributes to acceptable levels of understand
 Naming Conventions
 ------------------------------------------------
 
-These are the methodologies we use to stick on our css principles projects.
+These are the methodologies we use in our css principles projects.
 
 - [BEM](http://getbem.com/) - We use this for naming convention. Read [documentation](https://en.bem.info/methodology/naming-convention/)
-- [ITCSS](itcss.io) - We use this for organize our css files. Read [documentation](http://www.hongkiat.com/blog/inverted-triangle-css-web-development/)
+- [ITCSS](itcss.io) - We use this to organize our css files. Read [documentation](http://www.hongkiat.com/blog/inverted-triangle-css-web-development/)
 - [OOCSS](oocss.org) - We use its two Principles. Read [documentation](https://appendto.com/2014/04/oocss/)
 
-**BEM - Block Element Modifier**: is a popular naming convention for classes in CSS. Its goal is to help developers better understand the relationship between the Components, Also prevent extra selector nesting.
+**BEM - Block Element Modifier**: is a popular naming convention for classes in CSS. Its goal is to help developers better understand the relationship between the Components and prevent extra selector nesting.
 
 [Here is article which can help you understand more.](https://css-tricks.com/bem-101/)
 
@@ -439,7 +438,7 @@ These are the methodologies we use to stick on our css principles projects.
 ```
 
 
-**ITCSS - Inverted Triangle CSS**: it helps us to organize your project CSS files in such way that we can better deal with CSS specifics like global namespace, cascade and selectors specificity. One of the key principles of ITCSS is that it separates the CSS codebase to several sections (called layers), which take form of the inverted triangle:
+**ITCSS - Inverted Triangle CSS**: this helps us to organize project CSS files in such way that we can better deal with CSS specifics like global namespace, cascading and selectors specificity. One of the key principles of ITCSS is that it separates the CSS codebase into several sections (called layers), which take the form of the inverted triangle:
 
 - **Settings** – Used with postprocessors and contain `font`, `colors` `definitions`, etc.
 
@@ -451,68 +450,19 @@ These are the methodologies we use to stick on our css principles projects.
 
 - **Objects** – class-based selectors which define undecorated design patterns, for example media object known from OOCSS.
 
-- **Components** – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+- **Components** – specific UI components. This is where the majority of our work takes place, and our UI components are often composed of Objects and Components
 
 - **Trumps** - utilities and helper classes.
 
 **OOCSS - Object oriented CSS** : is a methodology of writing reusable CSS that is fast, scalable and maintainable.
 
-Syntax and formatting
-------------------------------------------------
-
-- Use multi-line CSS declarations. This helps with version control (diff-ing single line CSS can be a nightmare). Group CSS declarations by type - keeping font related styling together, layout styling together etc - and ordered by relevance, not alphabetized.
-- All CSS rules should have a space after the selector colon and a trailing semi-colon.
-- Selectors should be specified using of BEM.
-- use camel-casing if more than one word: e.g. twoWords.
-- use double underscore for child of component. 
-- use double hyphen for Modifier of the component.
-- selector names should be semantic instead of presentational.
-
-**Example**
-
-```css
-/* use camel-casing if more than one word: e.g. twoWords */
-.o-oneColumnGrid {
-    ...
-}
-
-/* ========= */
-
-/* Child elements use double underscore: __ */
-.c-nav__link {
-    ...
-}
-
-/* ========= */
-
-/* Modifier component use a double hyphen: -- */
-.btn--small {
-    ...
-}
-
-/* ========= */
-
-/* Semantic/
-
-.c-btn__primary {
-    ...
-}
-
-/* ========= */
-
-Presentational
-
-.c-btn__red {
-    ...
-}
-```
 
 Indentation
 ------------------------------------------------
 
 For all languages, indent your code with tabs. The default tab size should be set as 4.
 
-When indenting Sass or PostCSS, stick to the same four (4) spaces, and also leave a blank line before and after the nested ruleset.
+When indenting SCSS or PostCSS, stick to the same four (4) spaces, and also leave a blank line before and after the nested ruleset.
 
 **Example:**
 
@@ -531,7 +481,7 @@ Component and Object Organization
 ------------------------------------------------
 
 - Organize sections of code by component or object in the correct order provided by ITCSS
-- Develop a consistent commenting hierarchy. As I mentioned in CSS Methodology section.
+- Write verbose Commentary for other devlopers
 - Skin should be different from layout as per OOCSS principle.
 - When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.
 
@@ -572,7 +522,6 @@ background: #fff;
 
 Omit unit specification after “0” values, unless required.
 
-Do not use units after 0 values unless they are required.
 
 ```css 
 flex: 0px; /* This flex-basis component requires a unit. */
@@ -581,7 +530,6 @@ margin: 0;
 padding: 0;
 ```
 
-Omit leading “0”s in values.
 
 Do not put 0s in front of values or lengths between -1 and 1.
 
